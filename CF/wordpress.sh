@@ -23,9 +23,9 @@ sudo mysql <<EOF
 
 CREATE DATABASE wordpress;
 
-CREATE USER `wp_admin`@`localhost` IDENTIFIED BY 'root';
+CREATE USER `wp_admin`@`IP_Public` IDENTIFIED BY 'root';
 
-GRANT ALL ON wordpress.* TO `wp_admin`@`localhost`;
+GRANT ALL ON wordpress.* TO `wp_admin`@`IP_Public`;
 
 FLUSH PRIVILEGES;
 EOF
@@ -39,8 +39,6 @@ sudo mv latest.tar.gz /var/www/
 cd /var/www/
 
 sudo tar xpf latest.tar.gz
-
-cd
 
 sudo chown -R www-data:www-data /var/www/wordpress
 
