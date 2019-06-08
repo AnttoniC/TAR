@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 # Descobrindo Ip Public da Instancia:
 
@@ -40,8 +40,6 @@ cd /var/www/
 
 sudo tar xpf latest.tar.gz
 
-cd 
-
 sudo chown -R www-data:www-data /var/www/wordpress
 
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/wordpress.conf
@@ -57,7 +55,5 @@ sudo a2ensite wordpress.conf
 
 sudo systemctl reload apache2
 
-echo "### Credenciais do Banco de Dados do WordPress ###"
-echo "Usuario = wp_admin Senha = root"
 
 
