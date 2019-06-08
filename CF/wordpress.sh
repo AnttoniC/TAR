@@ -2,8 +2,8 @@
 
 # Descobrindo Ip Public da Instancia:
 
-IP_Public=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
-#IP_Private=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+#IP_Private=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+IP_Public=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
 
 # Intalando pacotes necessários para intalar o WordPress:
 
@@ -24,9 +24,9 @@ sudo mysql <<EOF
 
 CREATE DATABASE wordpress;
 
-CREATE USER `wp_admin`@`$IP_Public` IDENTIFIED BY 'root';
+CREATE USER `wp_admin`@`localhost` IDENTIFIED BY 'root';
 
-GRANT ALL ON wordpress.* TO `wp_admin`@`$IP_Public`;
+GRANT ALL ON wordpress.* TO `wp_admin`@`localhost`;
 
 FLUSH PRIVILEGES;
 EOF
