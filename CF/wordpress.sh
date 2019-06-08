@@ -33,7 +33,7 @@ EOF
 
 # Baixando e Configurando o WordPress:
 
-wget https://wordpress.org/latest.tar.gz
+sudo wget https://wordpress.org/latest.tar.gz
 
 sudo mv latest.tar.gz /var/www/
 
