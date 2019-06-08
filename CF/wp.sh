@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IP_PUBLIC=$1
+IP_PUBLIC=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
 
 # Intalando pacotes neceesarios para Instalar o WordPress
 
