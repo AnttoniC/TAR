@@ -40,6 +40,8 @@ cd /var/www/
 
 sudo tar xpf latest.tar.gz
 
+cd
+
 sudo chown -R www-data:www-data /var/www/wordpress
 
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/wordpress.conf
