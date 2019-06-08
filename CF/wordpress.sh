@@ -23,9 +23,9 @@ sudo mysql <<EOF
 
 CREATE DATABASE wordpress;
 
-CREATE USER `wp_admin`@`IP_Public` IDENTIFIED BY 'root';
+CREATE USER `wp_admin`@`$IP_Public` IDENTIFIED BY 'root';
 
-GRANT ALL ON wordpress.* TO `wp_admin`@`IP_Public`;
+GRANT ALL ON wordpress.* TO `wp_admin`@`$IP_Public`;
 
 FLUSH PRIVILEGES;
 EOF
