@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/bash 
 
-IP_PRIVATE=$1
-
+IP_PRIVATE=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
 
 #Criando o Banco de Dados do WordPress
 
@@ -21,33 +20,4 @@ GRANT ALL ON wordpress.* TO `wp_admin`@`$IP_PRIVATE`;
 
 FLUSH PRIVILEGES;
 EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
 
