@@ -10,7 +10,7 @@ sudo apt-get -y install mysql-server
 sudo sed -i '43s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf
 #sudo sed -i '43s/^/#/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
-sudo service mysqld restart
+sudo service mysql restart
 
 sudo mysql <<EOF
 
@@ -20,7 +20,7 @@ CREATE USER `wp_admin`@`$IP_WEB` IDENTIFIED BY 'root';
 
 GRANT ALL ON wordpress.* TO `wp_admin`@`$IP_WEB`;
 
-#GRANT ALL ON *.* TO 'wp_admin'@'$IP_WEB' IDENTIFIED BY 'root' WITH GRANT OPTION;
+#GRANT ALL ON *.* TO 'root'@'$IP_WEB' IDENTIFIED BY 'root' WITH GRANT OPTION;
 
 FLUSH PRIVILEGES;
 EOF
