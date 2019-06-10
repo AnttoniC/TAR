@@ -10,7 +10,7 @@ sudo apt -y install php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 sudo apt -y install apache2
 
-sudo apti -y install php libapache2-mod-php php-mysql
+sudo apt -y install php libapache2-mod-php php-mysql
 
 
 #Criando o Banco de Dados do WordPress
