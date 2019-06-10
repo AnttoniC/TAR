@@ -12,10 +12,6 @@ sudo apt -y install apache2
 
 sudo apt -y install php libapache2-mod-php php-mysql
 
-
-#Criando o Banco de Dados do WordPress
-
-
 # Baixando e Configurando o WordPress
 
 wget https://wordpress.org/latest.tar.gz
