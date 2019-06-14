@@ -27,8 +27,8 @@ sudo chown -R www-data:www-data /var/www/wordpress
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/wordpress.conf
 
 sed -i 's/database_name_here/wordpress/g' /var/www/wordpress/wp-config-sample.php
-sed -i 's/username_here/wordpress/g' /var/www/wordpress/wp-config-sample.php
-sed -i 's/password_here/wordpress/g' /var/www/wordpress/wp-config-sample.php
+sed -i 's/username_here/wp_admin/g' /var/www/wordpress/wp-config-sample.php
+sed -i 's/password_here/root/g' /var/www/wordpress/wp-config-sample.php
 sed -i "s/localhost/$IP_BD/g" /var/www/wordpress/wp-config-sample.php
 
 sudo sed -i '10s/^/        ServerName '$IP_PUBLIC'/' /etc/apache2/sites-available/wordpress.conf
