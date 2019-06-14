@@ -9,7 +9,7 @@ sudo apt -y update
 sudo apt -y install php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 sudo apt -y install apache2
-
+sudo apt -y install mysql-client
 sudo apt -y install php libapache2-mod-php php-mysql
 
 # Baixando e Configurando o WordPress
