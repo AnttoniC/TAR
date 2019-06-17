@@ -16,7 +16,8 @@ sudo service mysql restart
 
 sudo mysql <<EOF
 CREATE DATABASE wordpress;
-GRANT ALL ON wordpress.* TO 'wp_admin'@'$IP_WEB' IDENTIFIED BY 'root' WITH GRANT OPTION;
+#GRANT ALL ON wordpress.* TO 'wp_admin'@'$IP_WEB' IDENTIFIED BY 'root' WITH GRANT OPTION;
+GRANT ALL ON wordpress.* TO 'wp_admin'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 \q;
 EOF
