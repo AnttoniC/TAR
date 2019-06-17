@@ -12,18 +12,15 @@ sudo sed -i '43s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
 sudo service mysql restart
 
+#IP_WEB é o ip privado do servidor web onde está o serviço do wordpress
+
 sudo mysql <<EOF
-
 CREATE DATABASE wordpress;
-
-CREATE USER `wp_admin`@`$IP_WEB` IDENTIFIED BY 'root';
-
-GRANT ALL ON wordpress.* TO `wp_admin`@`$IP_WEB`;
-
 GRANT ALL ON wordpress.* TO 'wp_admin'@'$IP_WEB' IDENTIFIED BY 'root' WITH GRANT OPTION;
-
 FLUSH PRIVILEGES;
+\q;
 EOF
+
 
 
 
