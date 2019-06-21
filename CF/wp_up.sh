@@ -39,6 +39,15 @@ sudo sed -i 's/password_here/root/g' /var/www/wordpress/wp-config.php
 sudo sed -i 's/localhost/'$IP_BD'/g' /var/www/wordpress/wp-config.php
 
 
+#Configurando arquivo install.php para criar usuario do WP
+
+sudo sed -i '49s/0/2/' /var/www/wordpress/wp-admin/install.php
+sudo sed -i '299s/=.*;/="pt_BR";/' /var/www/wordpress/wp-admin/install.php
+sudo sed -i '359s/:.*;/:"acsigt.com.br";/' /var/www/wordpress/wp-admin/install.php
+sudo sed -i '360s/:.*;/:$USER;/' /var/www/wordpress/wp-admin/install.php
+sudo sed -i '361s/:.*;/:$PASSWORD;/' /var/www/wordpress/wp-admin/install.php
+sudo sed -i '362s/:.*;/:$PASSWORD;/' /var/www/wordpress/wp-admin/install.php
+sudo sed -i '363s/:.*;/:acigt22@gmail.com;/' /var/www/wordpress/wp-admin/install.php
 
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/wordpress.conf
 
