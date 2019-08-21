@@ -13,7 +13,7 @@ sudo apt-get -y install nfs-kernel-server
 
 chmod 777 /etc/exports
 
-echo /home       $ipSR'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
+echo /home       172.31.0.0/20'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 #echo /home       $ipC2'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 
 chmod 644 /etc/exports
