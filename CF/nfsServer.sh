@@ -11,10 +11,10 @@ sudo apt-get -y install nfs-kernel-server
 
 #   Configurando a exportação do NFS no Servidor
 
-sudo chmod 777 /etc/exports
+chmod 777 /etc/exports
 
-sudo echo /home       $ipC1'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
-sudo echo /home       $ipC2'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
+echo /home       $ipSR'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
+#echo /home       $ipC2'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 
-sudo chmod 644 /etc/exports
-sudo systemctl restart nfs-kernel-server
+chmod 644 /etc/exports
+systemctl restart nfs-kernel-server
