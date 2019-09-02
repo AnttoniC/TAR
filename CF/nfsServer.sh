@@ -6,7 +6,7 @@ IpSub=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
 
 echo $IpSub > ip.txt
 
-export typeset -i ipSub=$(cat ip.txt | cut -d"." -f3)
+export typeset ipSub=$(cat ip.txt | cut -d"." -f3)
 
 if [ $ipSub -le 15 ];
 then
