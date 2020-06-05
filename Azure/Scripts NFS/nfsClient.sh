@@ -11,7 +11,7 @@ sudo apt-get -y install nfs-common
 sudo mkdir -p /home
 
 #sudo mount $ipS:/home /home
-sudo mount 10.0.0.0/16:/home /home10.0.0.0/16
+#sudo mount 10.0.0.0/24:/home /home
 
 #  Verificando montagem da pasta
 
