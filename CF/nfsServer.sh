@@ -10,14 +10,15 @@ echo $IpSub > ip.txt
 
 export typeset ipSub=$(cat ip.txt | cut -d"." -f3)
 
-if [ $ipSub -le 15 ];
-then
-        IP=172.31.0.0/20
-        echo $IP
 
-elif [ $ipSub -ge 10 ];
+if [ $ipSub -eq 10 ];
 then
         IP=192.168.10.0/24
+        echo $IP
+
+elif [ $ipSub -le 15 ];
+then
+        IP=172.31.0.0/20
         echo $IP
         
 elif ([ $ipSub -ge 16  ]) && ([ $ipSub -le 31 ]);
