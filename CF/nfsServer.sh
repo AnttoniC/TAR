@@ -4,6 +4,8 @@
 
 IpSub=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
 
+echo $IP1 >> IPsNOS.txt
+echo $IP2 >> IPsNOS.txt
 echo $IpSub > ip.txt
 
 export typeset ipSub=$(cat ip.txt | cut -d"." -f3)
