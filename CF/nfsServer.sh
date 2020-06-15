@@ -3,7 +3,7 @@
 #ipS_private=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
 
 IpSub=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
-
+touch /home/ubuntu/IPs.txt
 #echo $IP1 >> IPsNOS.txt
 #echo $IP2 >> IPsNOS.txt
 echo $IpSub > ip.txt
