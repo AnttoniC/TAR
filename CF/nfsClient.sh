@@ -17,5 +17,6 @@ sudo mount $ipS:/home /nfs/home
 
 df -h
 
-#ipS_private=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
-#echo $ipS_private >> /nfs/home/ubuntu/IPs.txt
+#Compartilhando IP_Private com o Master para acessar os 
+ip_private=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+echo $ip_private >> /nfs/home/ubuntu/IPs.txt
