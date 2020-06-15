@@ -4,8 +4,8 @@
 
 IpSub=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
 
-echo $IP1 >> IPsNOS.txt
-echo $IP2 >> IPsNOS.txt
+#echo $IP1 >> IPsNOS.txt
+#echo $IP2 >> IPsNOS.txt
 echo $IpSub > ip.txt
 
 export typeset ipSub=$(cat ip.txt | cut -d"." -f3)
@@ -15,7 +15,7 @@ then
         IP=172.31.0.0/20
         echo $IP
 
-elif [ $ipSub -ge 10 ];
+elif [ $ipSub -eq 10 ];
 then
         IP=192.168.10.0/24
         echo $IP
@@ -46,16 +46,16 @@ rm -rf ip.txt
 
 #   Instalando NFS no Servidor
 
-sudo apt-get -y update
+sudo apt -y update
 
-sudo apt-get -y install nfs-kernel-server
+sudo apt -y install nfs-kernel-server
 
 #   Configurando a exportação do NFS no Servidor
 
-chmod 777 /etc/exports
+#chmod 777 /etc/exports
 
 echo /home       $IP'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 #echo /home       $ipC2'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 
-chmod 644 /etc/exports
-systemctl restart nfs-kernel-server
+#chmod 644 /etc/exports
+sudo systemctl restart nfs-kernel-server
