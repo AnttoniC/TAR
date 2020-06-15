@@ -15,7 +15,7 @@ then
         IP=172.31.0.0/20
         echo $IP
 
-elif [ $ipSub -eq 10 ];
+elif [ $ipSub -ge 10 ];
 then
         IP=192.168.10.0/24
         echo $IP
@@ -52,10 +52,10 @@ sudo apt -y install nfs-kernel-server
 
 #   Configurando a exportação do NFS no Servidor
 
-#chmod 777 /etc/exports
+chmod 777 /etc/exports
 
 echo /home       $IP'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 #echo /home       $ipC2'(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports
 
-#chmod 644 /etc/exports
+chmod 644 /etc/exports
 sudo systemctl restart nfs-kernel-server
