@@ -35,7 +35,7 @@ then
         IP=172.31.80.0/20
         echo $IP
 fi
-rm -rf ip.txt
+#rm -rf ip.txt
 
 
 #   Instalando NFS no Servidor
