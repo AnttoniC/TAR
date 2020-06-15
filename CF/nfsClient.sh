@@ -16,3 +16,6 @@ sudo mount $ipS:/home /nfs/home
 #  verificando montagem da pasta
 
 df -h
+
+#ipS_private=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+#echo $ipS_private >> /nfs/home/ubuntu/IPs.txt
