@@ -15,7 +15,7 @@ then
         IP=172.31.0.0/20
         echo $IP
 
-elif [ $ipSub -ge 10  ];
+elif [ $ipSub -ge 10 ];
 then
         IP=192.168.10.0/24
         echo $IP
