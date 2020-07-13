@@ -11,7 +11,7 @@ sudo apt -y install nfs-common
 sudo mkdir -p /nfs/home
 
 #Compartilhando o diretorio /home com os Clients no diretorio /nfs/home
-sudo mount $ipS:/home /nfs/home
+sudo mount $ipS:/home /home
 
 #  verificando montagem da pasta
 
@@ -19,4 +19,4 @@ df -h
 
 #Compartilhando IP_Private com o Master para acessar os 
 ip_private=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
-echo $ip_private >> /nfs/home/ubuntu/IPs.txt
+echo $ip_private >> /home/ubuntu/IPs.txt
