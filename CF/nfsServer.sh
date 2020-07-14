@@ -13,7 +13,7 @@ export typeset ipSub=$(cat ip.txt | cut -d"." -f3)
 
 if [ $ipSub -eq 10 ];
 then
-        IP=10.0.0.0/24
+        IP=10.0.10.0/24
         echo $IP
 #elif [ $ipSub -eq 10 ];
 #then
